@@ -2,6 +2,7 @@
 
 # Keyboard shortcut
 cmd+a call the autoload menu
+
 cmd+r restart the CPC
 
 
@@ -48,7 +49,7 @@ or
 
 ## on **SDL2**
 
-#define PAD_UP     SDL_SCANCODE_UP
+``#define PAD_UP     SDL_SCANCODE_UP
 #define PAD_LEFT   SDL_SCANCODE_LEFT;
 #define PAD_RIGHT  SDL_SCANCODE_RIGHT
 #define PAD_DOWN   SDL_SCANCODE_DOWN
@@ -62,14 +63,14 @@ or
 #define PAD_SELECT SDL_SCANCODE_F12
 #define PAD_QUIT   SDL_SCANCODE_C
 #define PAD_L2     SDL_SCANCODE_PAGEUP
-#define PAD_R2     SDL_SCANCODE_PAGEDOWN
+#define PAD_R2     SDL_SCANCODE_PAGEDOWN``
 
 GUI+R: reset
 GUI+A: autorun
 GUI+Q: exit
 GUI:F: fullscreen
 
-(GUI: CMD key on macOS, Windows key on Windows)
+(GUI: CMD key on macOS, shift+ctrl key on Windows)
 
 # C Tips
 Display all define from gcc:
@@ -105,3 +106,5 @@ TODO
 - Continuer/stopper après un arrêt
 - Faire du ligne par ligne
 - Tester si le fichier est bien du basic :)
+
+# TODO
