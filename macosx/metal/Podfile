@@ -1,0 +1,17 @@
+platform :osx, '10.9'
+
+
+target "CrocoDS" do
+
+inhibit_all_warnings!
+
+pod 'NMSSH', '~> 2.2'
+
+#main
+
+pod "CrocoDS-Core", :path => '../..'
+
+pod 'zipzap', '~> 8.1'
+
+
+end

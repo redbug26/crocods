@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.xtpl": "html",
+        "apps_keyboard.h": "c"
+    }
+}

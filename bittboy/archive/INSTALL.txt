@@ -1,0 +1,5 @@
+Extract file the files and copy the bittboy-crocods folder to to the emus folder on the Bittboy.
+Copy the file "crocods" to the foloder "gmenu2x/sections/emulators/" on the Bittboy. 
+Put your rom files in the folder "roms/amstrad" on the Bittboy.
+
+

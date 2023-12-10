@@ -1,0 +1,12 @@
+
+CROCODS      = $(wildcard ${SRCROOT}/crocods-core/*.c) $(wildcard ${SRCROOT}/crocods-core/iniparser/*.c)
+SDLMAIN 	 = ${SRCROOT}/main/main.c ${SRCROOT}/main/menu.c ${SRCROOT}/main/game_input.c ${SRCROOT}/main/resources.c ${SRCROOT}/main/guest_sdl2.c ${SRCROOT}/main/multitools.c
+TOOLSMAIN 	 = ${SRCROOT}/main/main.c ${SRCROOT}/main/menu.c ${SRCROOT}/main/game_input.c ${SRCROOT}/main/guest_cli.c ${SRCROOT}/main/multitools.c
+
+
+# ZIP support
+
+CFLAGS 	    +=-DZIP_SUPPORT -I${SRCROOT}/minizip
+CROCODS     += ${SRCROOT}/minizip/miniz.c 
+
+CFLAGS     += -I${SRCROOT}/main/headers -I${SRCROOT}/crocods-core

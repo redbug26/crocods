@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Document">
+            <connections>
+                <outlet property="consoleInput" destination="l22-S8-uji" id="Heu-am-YgB"/>
+                <outlet property="consoleOutput" destination="doS-dM-hnl" id="Gn5-ju-Wb0"/>
+                <outlet property="consoleWindow" destination="21F-Ah-yHX" id="eQ4-ug-LsT"/>
+                <outlet property="mainWindow" destination="xOd-HO-29H" id="h8M-YB-vcC"/>
+                <outlet property="memoryBankInput" destination="rdV-q6-hc6" id="KBx-9T-2mX"/>
+                <outlet property="memoryBankItem" destination="bWC-FW-IYP" id="Lf2-dh-z32"/>
+                <outlet property="memoryView" destination="8hr-8o-3rN" id="fF0-rh-8ND"/>
+                <outlet property="memoryWindow" destination="mRm-dL-mCj" id="VPR-lu-vtI"/>
+                <outlet property="view" destination="uqf-pe-VAF" id="HMP-rf-Yqk"/>
+                <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="xOd-HO-29H" userLabel="Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="133" y="235" width="160" height="144"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <value key="minSize" type="size" width="160" height="144"/>
+            <view key="contentView" id="gIp-Ho-8D9">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="KTk-4M-J7t" customClass="GBBorderView">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="144"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <openGLView colorSize="5bit_RGB_8bit_Alpha" useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" wantsBestResolutionOpenGLSurface="YES" id="uqf-pe-VAF" customClass="GBView">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="144"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </openGLView>
+                        </subviews>
+                    </customView>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="jvM-lC-fKb"/>
+            </connections>
+            <point key="canvasLocation" x="293" y="347"/>
+        </window>
+        <window title="Debug Console" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="21F-Ah-yHX" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" utility="YES" HUD="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="272" y="172" width="600" height="400"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <value key="minSize" type="size" width="600" height="400"/>
+            <view key="contentView" id="dCP-E5-7Fi">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="oTo-zx-o6N">
+                        <rect key="frame" x="0.0" y="25" width="600" height="376"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="EQe-Ad-L7S">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="376"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView editable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" baseWritingDirection="leftToRight" findStyle="bar" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="doS-dM-hnl">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="376"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                    <size key="minSize" width="600" height="376"/>
+                                    <size key="maxSize" width="1160" height="10000000"/>
+                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="minSize" width="600" height="376"/>
+                                    <size key="maxSize" width="1160" height="10000000"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="3fZ-tl-Zi7">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="cwi-6E-rbh">
+                            <rect key="frame" x="584" y="0.0" width="16" height="376"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField focusRingType="none" verticalHuggingPriority="750" mirrorLayoutDirectionWhenInternationalizing="never" id="l22-S8-uji">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="24"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" focusRingType="none" id="p3j-nS-44f">
+                            <font key="font" metaFont="fixedUser" size="11"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="consoleInput:" target="-2" id="ylQ-vw-ARS"/>
+                        </connections>
+                    </textField>
+                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="960-dL-7ZY">
+                        <rect key="frame" x="0.0" y="23" width="600" height="5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="348" y="-29"/>
+        </window>
+        <window title="Memory" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="mRm-dL-mCj" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="272" y="172" width="528" height="320"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" id="8hr-8o-3rN">
+                <rect key="frame" x="0.0" y="0.0" width="528" height="320"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="D857E961-E523-4295-83F8-0849316E827C" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="82v-uB-RPi">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="WUk-8p-S6B"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="E3z-um-6KG"/>
+                    <toolbarItem implicitItemIdentifier="4F6AAE25-1E9D-4111-9E5B-91F0792E56CD" label="Address Space" paletteLabel="Address Space" id="VTy-lj-K0H">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="100" height="25"/>
+                        <size key="maxSize" width="100" height="25"/>
+                        <popUpButton key="view" verticalHuggingPriority="750" id="vfJ-vu-gqJ">
+                            <rect key="frame" x="0.0" y="14" width="100" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bpD-j9-omo">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="gTX-6Z-mOH">
+                                    <items>
+                                        <menuItem title="Entire Space" id="Zp5-J9-dd3"/>
+                                        <menuItem title="ROM" tag="1" id="ANn-pq-5SA"/>
+                                        <menuItem title="Video RAM" tag="2" id="m35-GY-cKE"/>
+                                        <menuItem title="Cartridge RAM" tag="3" id="AOc-Up-PNm"/>
+                                        <menuItem title="RAM" tag="4" id="dg4-zf-bo4"/>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="hexUpdateSpace:" target="-2" id="1xc-Wa-RGp"/>
+                                </connections>
+                            </popUpButtonCell>
+                        </popUpButton>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="D16C64D2-2F0D-4033-A1EC-A1E699522ECE" label="Bank" paletteLabel="Bank" id="bWC-FW-IYP">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="64" height="22"/>
+                        <size key="maxSize" width="64" height="22"/>
+                        <textField key="view" verticalHuggingPriority="750" id="rdV-q6-hc6">
+                            <rect key="frame" x="0.0" y="14" width="64" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" id="JCn-Y1-eHS">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                            <connections>
+                                <action selector="hexUpdateBank:" target="-2" id="Mx9-WI-wgO"/>
+                            </connections>
+                        </textField>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="F9723DA8-D79F-43AB-876B-783DD0204AA6" label="Go to" paletteLabel="Go to" id="rLO-D7-zRG">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="96" height="22"/>
+                        <size key="maxSize" width="128" height="22"/>
+                        <textField key="view" verticalHuggingPriority="750" id="EJd-jG-hmH">
+                            <rect key="frame" x="0.0" y="14" width="96" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" bezelStyle="round" id="vg5-Nn-abb">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                            <connections>
+                                <action selector="hexGoTo:" target="-2" id="7WG-8C-SK8"/>
+                            </connections>
+                        </textField>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="VTy-lj-K0H"/>
+                    <toolbarItem reference="bWC-FW-IYP"/>
+                    <toolbarItem reference="E3z-um-6KG"/>
+                    <toolbarItem reference="rLO-D7-zRG"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <point key="canvasLocation" x="-185" y="61"/>
+        </window>
+        <menuItem title="Cartridge RAM" id="ylM-ah-PNQ"/>
+    </objects>
+</document>

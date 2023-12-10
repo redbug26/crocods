@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "**/frontmatter.json": "jsonc",
+        "**/.frontmatter/config/*.json": "jsonc",
+        "*.xtpl": "html",
+        "*.asm": "pasmo",
+        "*.s": "pasmo",
+        "ios": "c",
+        "shared.h": "c",
+        "sdl.h": "c",
+        "time.h": "c",
+        "multitools.h": "c",
+        "socket.h": "c",
+        "memory_resource": "c",
+        "memory": "c",
+        "ratio": "c",
+        "apps_console_internal.h": "c"
+    },
+    "makefile.loggingLevel": "Verbose"
+}

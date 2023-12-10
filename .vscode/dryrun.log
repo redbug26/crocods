@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/miguelvanhove/Dropbox/Sources/rg350/crocods'
+make: Leaving directory `/Users/miguelvanhove/Dropbox/Sources/rg350/crocods'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 

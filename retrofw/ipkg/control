@@ -1,0 +1,10 @@
+Package: crocods
+Version: 20190203
+Description: Amstrad CPC emualator
+Section: emus
+Priority: optional
+Maintainer: redbug
+Architecture: mipsel
+Homepage: http://www.kyuran.be/
+Depends:
+Source: https://github.com/kyuran/crocods

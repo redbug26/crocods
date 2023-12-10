@@ -1,0 +1,60 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "make",
+            "command": "${workspaceFolder}/build/build_crocods_macosx.sh",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+              },
+            "problemMatcher": {
+                "owner": "cpptools",
+                "fileLocation": [ "relative", "/toto/" ],
+                "pattern": {
+                "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "severity": 4,
+                "message": 5
+                },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "SDCC - make",
+            "command": "/Users/miguelvanhove/Library/CloudStorage/OneDrive-Kyuran/Documents/Sources/crocods/build/build_crocods_macosx.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": {
+                "owner": "base",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/src"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):\\s+(warning|error|syntax error)[^:]*:\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "severity": 3,
+                    "message": 4
+                }
+            }
+        },
+        {
+            "type": "process",
+            "label": "SDCC - Retro Virtual Machine",
+            "command": "/Users/miguelvanhove/Library/CloudStorage/OneDrive-Kyuran/Documents/Sources/crocods/build/crocods_macosx"
+        }
+    ],
+    "version": "2.0.0"
+}

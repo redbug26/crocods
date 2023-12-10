@@ -1,0 +1,7 @@
+title=bittboy-crocods
+description=CrocoDS
+icon=/mnt/emus/bittboy-crocods/bittboy-crocods.png
+exec=/mnt/emus/bittboy-crocods/bittboy-crocods
+clock=702
+selectordir=/mnt/roms/amstrad
+selectorelement=3

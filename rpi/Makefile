@@ -1,0 +1,52 @@
+#CROSS_COMPILE = /root/raspberrypi/tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-
+CROSS_COMPILE = arm-linux-gnueabi-
+
+
+
+CC = $(CROSS_COMPILE)gcc
+CXX = $(CROSS_COMPILE)g++
+STRIP = $(CROSS_COMPILE)strip
+
+DEFINES 	= -DSDL2 -DRPI
+DEFINES	       += -DREDBUG
+ZIP_SUPPORT     = 1
+
+
+
+SRCROOT = ..
+
+CFLAGS 		= -O2 -ffast-math -fomit-frame-pointer -fdata-sections -ffunction-sections -std=gnu89 -Wall ${DEFINES} 
+CFLAGS  += -static
+#CFLAGS	   += -mno-relax-pic-calls -mno-abicalls -mlong-calls -mlong32 -mlocal-sdata -mno-check-zero-division -mfp32 -mps32r2
+#CFLAGS     += -mgp32 -mno-embedded-data -fno-pic -mno-interlink-compressed -mno-mt -mno-micromips -mno-interlink-mips16
+LDFLAGS 	= -Wl,--as-needed -Wl,--gc-sections -flto -s
+
+# SDL Support
+CFLAGS += `/root/sdl2/bin/sdl2-config --cflags`
+CFLAGS += -I /root/sdl2/include
+# remove -mwindows for printf stdout
+# LDFLAGS = -L/root/sdl2/lib -lSDLmain -lSDL -pthread
+LDFLAGS = `/root/sdl2/bin/sdl2-config --static-libs`
+
+
+OUT	 	= crocods
+
+include ${SRCROOT}/makefile.shared
+
+SOURCES 	= ${SDL} ${CROCODS}
+SOURCES	   += ${THIRD_PARTY}
+
+OBJS 		= ${SOURCES:.c=.o}
+
+all		: ${OUT} pack
+
+pack	:
+		${STRIP} crocods
+
+${OUT}	: ${OBJS}
+		${CC} -o ${OUT} ${SOURCES} ${CFLAGS} ${LDFLAGS}
+	
+clean	:
+		rm ${OBJS}
+		rm ./opk/${OUT}
+		rm ./opk/${OUT}.opk

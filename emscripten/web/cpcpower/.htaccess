@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ([0-9]+)$    /web/?cpcpowerid=$1 [L]

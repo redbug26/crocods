@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000AE0CF1DB7F0C50094F644 /* Floppy.png in Resources */ = {isa = PBXBuildFile; fileRef = 000AE0CE1DB7F0C50094F644 /* Floppy.png */; };
+		001F6FEE1DA8FDF6002ED3F2 /* TapePlayerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 001F6FEC1DA8FDF6002ED3F2 /* TapePlayerWindowController.m */; };
+		001F6FEF1DA8FDF6002ED3F2 /* TapePlayerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001F6FED1DA8FDF6002ED3F2 /* TapePlayerWindowController.xib */; };
+		001F6FFE1DA95159002ED3F2 /* tape.png in Resources */ = {isa = PBXBuildFile; fileRef = 001F6FFC1DA95159002ED3F2 /* tape.png */; };
+		001F6FFF1DA95159002ED3F2 /* tape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 001F6FFD1DA95159002ED3F2 /* tape@2x.png */; };
+		0088E3351DB00D220033E0F9 /* os_mod.rom in Resources */ = {isa = PBXBuildFile; fileRef = 0088E3341DB00D220033E0F9 /* os_mod.rom */; };
+		00D2D50E1D9FFC4F009B65F8 /* CrocoApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2D50D1D9FFC4F009B65F8 /* CrocoApplication.m */; };
+		13350B471E2908CB00AD9340 /* ManageDSK.m in Sources */ = {isa = PBXBuildFile; fileRef = 13350B451E2908CB00AD9340 /* ManageDSK.m */; };
+		13350B481E2908CB00AD9340 /* ManageDSK.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13350B461E2908CB00AD9340 /* ManageDSK.xib */; };
+		1338A7831DAD1B44007328DB /* ImporterDSK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1338A7811DAD1B44007328DB /* ImporterDSK.m */; };
+		1338A7841DAD1B44007328DB /* ImporterDSK.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1338A7821DAD1B44007328DB /* ImporterDSK.xib */; };
+		134995ED1DB0CBD400DA8161 /* noscript.c in Sources */ = {isa = PBXBuildFile; fileRef = 134995DF1DB0CBD400DA8161 /* noscript.c */; };
+		134995EF1DB0CBD400DA8161 /* dissz80.c in Sources */ = {isa = PBXBuildFile; fileRef = 134995E11DB0CBD400DA8161 /* dissz80.c */; };
+		134995F21DB0CBD400DA8161 /* loadfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 134995E71DB0CBD400DA8161 /* loadfile.c */; };
+		134995F51DB0CBD400DA8161 /* tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 134995EA1DB0CBD400DA8161 /* tables.c */; };
+		134B8CA11DB0AA4F00FC5123 /* CrocoDebuggerPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B8C9F1DB0AA4F00FC5123 /* CrocoDebuggerPanel.m */; };
+		134B8CA21DB0AA4F00FC5123 /* CrocoDebuggerPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134B8CA01DB0AA4F00FC5123 /* CrocoDebuggerPanel.xib */; };
+		136BFE4C1D9BFE5D001CA6A2 /* SSHCrocoApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 136BFE4B1D9BFE5D001CA6A2 /* SSHCrocoApplication.m */; };
+		13807BAB23A161FD00F26139 /* GBViewMetal.m in Sources */ = {isa = PBXBuildFile; fileRef = 13807BA323A161FD00F26139 /* GBViewMetal.m */; };
+		13807BAC23A161FD00F26139 /* GBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13807BA423A161FD00F26139 /* GBView.m */; };
+		13807BAD23A161FD00F26139 /* NearestNeighbor.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 13807BA623A161FD00F26139 /* NearestNeighbor.fsh */; };
+		13807BAE23A161FD00F26139 /* LCD.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 13807BA723A161FD00F26139 /* LCD.fsh */; };
+		13807BAF23A161FD00F26139 /* CRT.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 13807BA823A161FD00F26139 /* CRT.fsh */; };
+		13807BB123A164EE00F26139 /* MasterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 13807BA923A161FD00F26139 /* MasterShader.metal */; };
+		13807BB223A1659400F26139 /* MasterShader.metal in Resources */ = {isa = PBXBuildFile; fileRef = 13807BA923A161FD00F26139 /* MasterShader.metal */; };
+		13997B9C1D8A793600B8F145 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997B9B1D8A793600B8F145 /* main.m */; };
+		13997B9E1D8A793600B8F145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13997B9D1D8A793600B8F145 /* Assets.xcassets */; };
+		13997BCA1D8A799100B8F145 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997BAA1D8A799100B8F145 /* AppDelegate.m */; };
+		13997BCE1D8A799100B8F145 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997BAF1D8A799100B8F145 /* Document.m */; };
+		13997BCF1D8A799100B8F145 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13997BB01D8A799100B8F145 /* Document.xib */; };
+		13997BD01D8A799100B8F145 /* GBAudioClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997BB21D8A799100B8F145 /* GBAudioClient.m */; };
+		13997BD11D8A799100B8F145 /* GBBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997BB41D8A799100B8F145 /* GBBorderView.m */; };
+		13997BD21D8A799100B8F145 /* GBButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997BB61D8A799100B8F145 /* GBButtons.m */; };
+		13997BD51D8A799100B8F145 /* GBPreferencesWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997BBC1D8A799100B8F145 /* GBPreferencesWindow.m */; };
+		13997BD61D8A799100B8F145 /* GBShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997BBE1D8A799100B8F145 /* GBShader.m */; };
+		13997BDB1D8A799100B8F145 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13997BC41D8A799100B8F145 /* MainMenu.xib */; };
+		13997BDC1D8A799100B8F145 /* NSString+StringForKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 13997BC71D8A799100B8F145 /* NSString+StringForKey.m */; };
+		13997BDE1D8A799100B8F145 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13997BC91D8A799100B8F145 /* Preferences.xib */; };
+		13C457561DB7B56600F231F5 /* spatial_color_quant.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13C457541DB7B56600F231F5 /* spatial_color_quant.mm */; };
+		DBB910A99E5915BFFAE63A7D /* libPods-CrocoDS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196E36F4A1C5365B35A419F9 /* libPods-CrocoDS.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000AE0CE1DB7F0C50094F644 /* Floppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Floppy.png; path = Resources/Floppy.png; sourceTree = SOURCE_ROOT; };
+		001F6FEB1DA8FDF6002ED3F2 /* TapePlayerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapePlayerWindowController.h; sourceTree = "<group>"; };
+		001F6FEC1DA8FDF6002ED3F2 /* TapePlayerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapePlayerWindowController.m; sourceTree = "<group>"; };
+		001F6FED1DA8FDF6002ED3F2 /* TapePlayerWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TapePlayerWindowController.xib; sourceTree = "<group>"; };
+		001F6FFC1DA95159002ED3F2 /* tape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tape.png; sourceTree = "<group>"; };
+		001F6FFD1DA95159002ED3F2 /* tape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tape@2x.png"; sourceTree = "<group>"; };
+		0088E3341DB00D220033E0F9 /* os_mod.rom */ = {isa = PBXFileReference; lastKnownFileType = file; path = os_mod.rom; sourceTree = "<group>"; };
+		00D2D50C1D9FFC4F009B65F8 /* CrocoApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrocoApplication.h; sourceTree = "<group>"; };
+		00D2D50D1D9FFC4F009B65F8 /* CrocoApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrocoApplication.m; sourceTree = "<group>"; };
+		12C8BAF627FB239B317DBFF0 /* Pods-CrocoDS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrocoDS.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrocoDS/Pods-CrocoDS.release.xcconfig"; sourceTree = "<group>"; };
+		13350B441E2908CB00AD9340 /* ManageDSK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageDSK.h; sourceTree = "<group>"; };
+		13350B451E2908CB00AD9340 /* ManageDSK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageDSK.m; sourceTree = "<group>"; };
+		13350B461E2908CB00AD9340 /* ManageDSK.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageDSK.xib; sourceTree = "<group>"; };
+		1338A7801DAD1B44007328DB /* ImporterDSK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImporterDSK.h; sourceTree = "<group>"; };
+		1338A7811DAD1B44007328DB /* ImporterDSK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImporterDSK.m; sourceTree = "<group>"; };
+		1338A7821DAD1B44007328DB /* ImporterDSK.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImporterDSK.xib; sourceTree = "<group>"; };
+		134995DF1DB0CBD400DA8161 /* noscript.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = noscript.c; path = dz80/noscript.c; sourceTree = "<group>"; };
+		134995E01DB0CBD400DA8161 /* config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = config.c; path = dz80/config.c; sourceTree = "<group>"; };
+		134995E11DB0CBD400DA8161 /* dissz80.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dissz80.c; path = dz80/dissz80.c; sourceTree = "<group>"; };
+		134995E21DB0CBD400DA8161 /* dissz80.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dissz80.h; path = dz80/dissz80.h; sourceTree = "<group>"; };
+		134995E31DB0CBD400DA8161 /* dissz80p.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dissz80p.h; path = dz80/dissz80p.h; sourceTree = "<group>"; };
+		134995E41DB0CBD400DA8161 /* dz80.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dz80.c; path = dz80/dz80.c; sourceTree = "<group>"; };
+		134995E51DB0CBD400DA8161 /* dz80.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dz80.h; path = dz80/dz80.h; sourceTree = "<group>"; };
+		134995E61DB0CBD400DA8161 /* example.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = example.c; path = dz80/example.c; sourceTree = "<group>"; };
+		134995E71DB0CBD400DA8161 /* loadfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = loadfile.c; path = dz80/loadfile.c; sourceTree = "<group>"; };
+		134995E81DB0CBD400DA8161 /* parsecmd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = parsecmd.c; path = dz80/parsecmd.c; sourceTree = "<group>"; };
+		134995E91DB0CBD400DA8161 /* script.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = script.c; path = dz80/script.c; sourceTree = "<group>"; };
+		134995EA1DB0CBD400DA8161 /* tables.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tables.c; path = dz80/tables.c; sourceTree = "<group>"; };
+		134995EB1DB0CBD400DA8161 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = dz80/types.h; sourceTree = "<group>"; };
+		134995EC1DB0CBD400DA8161 /* skip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = skip.c; path = dz80/skip.c; sourceTree = "<group>"; };
+		134B8C9E1DB0AA4F00FC5123 /* CrocoDebuggerPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrocoDebuggerPanel.h; sourceTree = "<group>"; };
+		134B8C9F1DB0AA4F00FC5123 /* CrocoDebuggerPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrocoDebuggerPanel.m; sourceTree = "<group>"; };
+		134B8CA01DB0AA4F00FC5123 /* CrocoDebuggerPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrocoDebuggerPanel.xib; sourceTree = "<group>"; };
+		136BFE4A1D9BFE5D001CA6A2 /* SSHCrocoApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHCrocoApplication.h; sourceTree = "<group>"; };
+		136BFE4B1D9BFE5D001CA6A2 /* SSHCrocoApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHCrocoApplication.m; sourceTree = "<group>"; };
+		13807BA223A161FD00F26139 /* GBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBView.h; sourceTree = "<group>"; };
+		13807BA323A161FD00F26139 /* GBViewMetal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBViewMetal.m; sourceTree = "<group>"; };
+		13807BA423A161FD00F26139 /* GBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBView.m; sourceTree = "<group>"; };
+		13807BA623A161FD00F26139 /* NearestNeighbor.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NearestNeighbor.fsh; sourceTree = "<group>"; };
+		13807BA723A161FD00F26139 /* LCD.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LCD.fsh; sourceTree = "<group>"; };
+		13807BA823A161FD00F26139 /* CRT.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CRT.fsh; sourceTree = "<group>"; };
+		13807BA923A161FD00F26139 /* MasterShader.metal */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = MasterShader.metal; sourceTree = "<group>"; };
+		13807BAA23A161FD00F26139 /* GBViewMetal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBViewMetal.h; sourceTree = "<group>"; };
+		13997B941D8A793600B8F145 /* CrocoDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrocoDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13997B9B1D8A793600B8F145 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13997B9D1D8A793600B8F145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13997BA21D8A793600B8F145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13997BA91D8A799100B8F145 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "crocods-mac/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		13997BAA1D8A799100B8F145 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "crocods-mac/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		13997BAE1D8A799100B8F145 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Document.h; path = "crocods-mac/Document.h"; sourceTree = SOURCE_ROOT; };
+		13997BAF1D8A799100B8F145 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Document.m; path = "crocods-mac/Document.m"; sourceTree = SOURCE_ROOT; };
+		13997BB01D8A799100B8F145 /* Document.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Document.xib; path = Resources/Document.xib; sourceTree = SOURCE_ROOT; };
+		13997BB11D8A799100B8F145 /* GBAudioClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBAudioClient.h; path = "crocods-mac/GBAudioClient.h"; sourceTree = SOURCE_ROOT; };
+		13997BB21D8A799100B8F145 /* GBAudioClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBAudioClient.m; path = "crocods-mac/GBAudioClient.m"; sourceTree = SOURCE_ROOT; };
+		13997BB31D8A799100B8F145 /* GBBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBBorderView.h; path = "crocods-mac/GBBorderView.h"; sourceTree = SOURCE_ROOT; };
+		13997BB41D8A799100B8F145 /* GBBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBBorderView.m; path = "crocods-mac/GBBorderView.m"; sourceTree = SOURCE_ROOT; };
+		13997BB51D8A799100B8F145 /* GBButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBButtons.h; path = "crocods-mac/GBButtons.h"; sourceTree = SOURCE_ROOT; };
+		13997BB61D8A799100B8F145 /* GBButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBButtons.m; path = "crocods-mac/GBButtons.m"; sourceTree = SOURCE_ROOT; };
+		13997BBB1D8A799100B8F145 /* GBPreferencesWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBPreferencesWindow.h; path = "crocods-mac/GBPreferencesWindow.h"; sourceTree = SOURCE_ROOT; };
+		13997BBC1D8A799100B8F145 /* GBPreferencesWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBPreferencesWindow.m; path = "crocods-mac/GBPreferencesWindow.m"; sourceTree = SOURCE_ROOT; };
+		13997BBD1D8A799100B8F145 /* GBShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBShader.h; path = "crocods-mac/GBShader.h"; sourceTree = SOURCE_ROOT; };
+		13997BBE1D8A799100B8F145 /* GBShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBShader.m; path = "crocods-mac/GBShader.m"; sourceTree = SOURCE_ROOT; };
+		13997BC41D8A799100B8F145 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		13997BC51D8A799100B8F145 /* NSKeyboardShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSKeyboardShortcut.h; path = "crocods-mac/NSKeyboardShortcut.h"; sourceTree = SOURCE_ROOT; };
+		13997BC61D8A799100B8F145 /* NSString+StringForKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StringForKey.h"; path = "crocods-mac/NSString+StringForKey.h"; sourceTree = SOURCE_ROOT; };
+		13997BC71D8A799100B8F145 /* NSString+StringForKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StringForKey.m"; path = "crocods-mac/NSString+StringForKey.m"; sourceTree = SOURCE_ROOT; };
+		13997BC91D8A799100B8F145 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Preferences.xib; path = Resources/Preferences.xib; sourceTree = SOURCE_ROOT; };
+		13C457541DB7B56600F231F5 /* spatial_color_quant.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = spatial_color_quant.mm; path = scolorq/spatial_color_quant.mm; sourceTree = "<group>"; };
+		13C457551DB7B56600F231F5 /* spatial_color_quant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spatial_color_quant.h; path = scolorq/spatial_color_quant.h; sourceTree = "<group>"; };
+		196E36F4A1C5365B35A419F9 /* libPods-CrocoDS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrocoDS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		454572CB493288261AFF12EF /* Pods-CrocoDS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrocoDS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrocoDS/Pods-CrocoDS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13997B911D8A793600B8F145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB910A99E5915BFFAE63A7D /* libPods-CrocoDS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		001F6FF71DA92A46002ED3F2 /* Special Functions */ = {
+			isa = PBXGroup;
+			children = (
+				001F6FEB1DA8FDF6002ED3F2 /* TapePlayerWindowController.h */,
+				001F6FEC1DA8FDF6002ED3F2 /* TapePlayerWindowController.m */,
+				001F6FED1DA8FDF6002ED3F2 /* TapePlayerWindowController.xib */,
+				1338A7801DAD1B44007328DB /* ImporterDSK.h */,
+				1338A7811DAD1B44007328DB /* ImporterDSK.m */,
+				1338A7821DAD1B44007328DB /* ImporterDSK.xib */,
+				13350B441E2908CB00AD9340 /* ManageDSK.h */,
+				13350B451E2908CB00AD9340 /* ManageDSK.m */,
+				13350B461E2908CB00AD9340 /* ManageDSK.xib */,
+			);
+			name = "Special Functions";
+			sourceTree = "<group>";
+		};
+		0088E32F1DB00BE20033E0F9 /* Various Roms */ = {
+			isa = PBXGroup;
+			children = (
+				0088E3341DB00D220033E0F9 /* os_mod.rom */,
+			);
+			name = "Various Roms";
+			sourceTree = "<group>";
+		};
+		00D2D50B1D9FFC31009B65F8 /* Croco Application */ = {
+			isa = PBXGroup;
+			children = (
+				136BFE4A1D9BFE5D001CA6A2 /* SSHCrocoApplication.h */,
+				136BFE4B1D9BFE5D001CA6A2 /* SSHCrocoApplication.m */,
+				00D2D50C1D9FFC4F009B65F8 /* CrocoApplication.h */,
+				00D2D50D1D9FFC4F009B65F8 /* CrocoApplication.m */,
+			);
+			name = "Croco Application";
+			sourceTree = "<group>";
+		};
+		134995DE1DB0CB9500DA8161 /* dz80 */ = {
+			isa = PBXGroup;
+			children = (
+				134995DF1DB0CBD400DA8161 /* noscript.c */,
+				134995E01DB0CBD400DA8161 /* config.c */,
+				134995E11DB0CBD400DA8161 /* dissz80.c */,
+				134995E21DB0CBD400DA8161 /* dissz80.h */,
+				134995E31DB0CBD400DA8161 /* dissz80p.h */,
+				134995E41DB0CBD400DA8161 /* dz80.c */,
+				134995E51DB0CBD400DA8161 /* dz80.h */,
+				134995E61DB0CBD400DA8161 /* example.c */,
+				134995E71DB0CBD400DA8161 /* loadfile.c */,
+				134995E81DB0CBD400DA8161 /* parsecmd.c */,
+				134995E91DB0CBD400DA8161 /* script.c */,
+				134995EA1DB0CBD400DA8161 /* tables.c */,
+				134995EB1DB0CBD400DA8161 /* types.h */,
+				134995EC1DB0CBD400DA8161 /* skip.c */,
+			);
+			name = dz80;
+			sourceTree = "<group>";
+		};
+		13704CD71D9A603C00845B65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				000AE0CE1DB7F0C50094F644 /* Floppy.png */,
+				001F6FFC1DA95159002ED3F2 /* tape.png */,
+				001F6FFD1DA95159002ED3F2 /* tape@2x.png */,
+				13997BB01D8A799100B8F145 /* Document.xib */,
+				13997BC41D8A799100B8F145 /* MainMenu.xib */,
+				13997BC91D8A799100B8F145 /* Preferences.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		13807BA123A161FD00F26139 /* framebuffer */ = {
+			isa = PBXGroup;
+			children = (
+				13807BA223A161FD00F26139 /* GBView.h */,
+				13807BA423A161FD00F26139 /* GBView.m */,
+				13807BA323A161FD00F26139 /* GBViewMetal.m */,
+				13807BAA23A161FD00F26139 /* GBViewMetal.h */,
+				13807BA523A161FD00F26139 /* Shaders */,
+			);
+			path = framebuffer;
+			sourceTree = "<group>";
+		};
+		13807BA523A161FD00F26139 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				13807BA623A161FD00F26139 /* NearestNeighbor.fsh */,
+				13807BA723A161FD00F26139 /* LCD.fsh */,
+				13807BA823A161FD00F26139 /* CRT.fsh */,
+				13807BA923A161FD00F26139 /* MasterShader.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		13997B8B1D8A793600B8F145 = {
+			isa = PBXGroup;
+			children = (
+				13997B961D8A793600B8F145 /* CrocoDS */,
+				13997B951D8A793600B8F145 /* Products */,
+				87AD946684881520CC675540 /* Pods */,
+				2D196FDF12B5F9D3D38ED69C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13997B951D8A793600B8F145 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13997B941D8A793600B8F145 /* CrocoDS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13997B961D8A793600B8F145 /* CrocoDS */ = {
+			isa = PBXGroup;
+			children = (
+				13C457511DB7ACAD00F231F5 /* scolorq */,
+				134995DE1DB0CB9500DA8161 /* dz80 */,
+				0088E32F1DB00BE20033E0F9 /* Various Roms */,
+				13704CD71D9A603C00845B65 /* Resources */,
+				13997BA81D8A794000B8F145 /* main */,
+				13997B9D1D8A793600B8F145 /* Assets.xcassets */,
+				13997BA21D8A793600B8F145 /* Info.plist */,
+				13997B9A1D8A793600B8F145 /* Supporting Files */,
+			);
+			name = CrocoDS;
+			path = "crocods-mac";
+			sourceTree = "<group>";
+		};
+		13997B9A1D8A793600B8F145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13997B9B1D8A793600B8F145 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13997BA81D8A794000B8F145 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				13807BA123A161FD00F26139 /* framebuffer */,
+				001F6FF71DA92A46002ED3F2 /* Special Functions */,
+				00D2D50B1D9FFC31009B65F8 /* Croco Application */,
+				13997BA91D8A799100B8F145 /* AppDelegate.h */,
+				13997BAA1D8A799100B8F145 /* AppDelegate.m */,
+				134B8C9E1DB0AA4F00FC5123 /* CrocoDebuggerPanel.h */,
+				134B8C9F1DB0AA4F00FC5123 /* CrocoDebuggerPanel.m */,
+				134B8CA01DB0AA4F00FC5123 /* CrocoDebuggerPanel.xib */,
+				13997BAE1D8A799100B8F145 /* Document.h */,
+				13997BAF1D8A799100B8F145 /* Document.m */,
+				13997BB11D8A799100B8F145 /* GBAudioClient.h */,
+				13997BB21D8A799100B8F145 /* GBAudioClient.m */,
+				13997BB31D8A799100B8F145 /* GBBorderView.h */,
+				13997BB41D8A799100B8F145 /* GBBorderView.m */,
+				13997BB51D8A799100B8F145 /* GBButtons.h */,
+				13997BB61D8A799100B8F145 /* GBButtons.m */,
+				13997BBB1D8A799100B8F145 /* GBPreferencesWindow.h */,
+				13997BBC1D8A799100B8F145 /* GBPreferencesWindow.m */,
+				13997BBD1D8A799100B8F145 /* GBShader.h */,
+				13997BBE1D8A799100B8F145 /* GBShader.m */,
+				13997BC51D8A799100B8F145 /* NSKeyboardShortcut.h */,
+				13997BC61D8A799100B8F145 /* NSString+StringForKey.h */,
+				13997BC71D8A799100B8F145 /* NSString+StringForKey.m */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		13C457511DB7ACAD00F231F5 /* scolorq */ = {
+			isa = PBXGroup;
+			children = (
+				13C457541DB7B56600F231F5 /* spatial_color_quant.mm */,
+				13C457551DB7B56600F231F5 /* spatial_color_quant.h */,
+			);
+			name = scolorq;
+			sourceTree = "<group>";
+		};
+		2D196FDF12B5F9D3D38ED69C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				196E36F4A1C5365B35A419F9 /* libPods-CrocoDS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87AD946684881520CC675540 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				454572CB493288261AFF12EF /* Pods-CrocoDS.debug.xcconfig */,
+				12C8BAF627FB239B317DBFF0 /* Pods-CrocoDS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13997B931D8A793600B8F145 /* CrocoDS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13997BA51D8A793600B8F145 /* Build configuration list for PBXNativeTarget "CrocoDS" */;
+			buildPhases = (
+				8C4CAF6A7EE2283C2FC53D03 /* [CP] Check Pods Manifest.lock */,
+				13997B901D8A793600B8F145 /* Sources */,
+				13997B911D8A793600B8F145 /* Frameworks */,
+				13997B921D8A793600B8F145 /* Resources */,
+				007FA3601DAC191800CF3350 /* ShellScript */,
+				4DEA425F833E224254525E5F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrocoDS;
+			productName = sample;
+			productReference = 13997B941D8A793600B8F145 /* CrocoDS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13997B8C1D8A793600B8F145 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					New,
+				);
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Miguel Vanhove";
+				TargetAttributes = {
+					13997B931D8A793600B8F145 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X4F625256R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 13997B8F1D8A793600B8F145 /* Build configuration list for PBXProject "CrocoDS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 13997B8B1D8A793600B8F145;
+			productRefGroup = 13997B951D8A793600B8F145 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13997B931D8A793600B8F145 /* CrocoDS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13997B921D8A793600B8F145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13807BB223A1659400F26139 /* MasterShader.metal in Resources */,
+				001F6FEF1DA8FDF6002ED3F2 /* TapePlayerWindowController.xib in Resources */,
+				13997BCF1D8A799100B8F145 /* Document.xib in Resources */,
+				0088E3351DB00D220033E0F9 /* os_mod.rom in Resources */,
+				1338A7841DAD1B44007328DB /* ImporterDSK.xib in Resources */,
+				13350B481E2908CB00AD9340 /* ManageDSK.xib in Resources */,
+				000AE0CF1DB7F0C50094F644 /* Floppy.png in Resources */,
+				13997B9E1D8A793600B8F145 /* Assets.xcassets in Resources */,
+				001F6FFE1DA95159002ED3F2 /* tape.png in Resources */,
+				134B8CA21DB0AA4F00FC5123 /* CrocoDebuggerPanel.xib in Resources */,
+				13807BAE23A161FD00F26139 /* LCD.fsh in Resources */,
+				001F6FFF1DA95159002ED3F2 /* tape@2x.png in Resources */,
+				13807BAD23A161FD00F26139 /* NearestNeighbor.fsh in Resources */,
+				13997BDE1D8A799100B8F145 /* Preferences.xib in Resources */,
+				13807BAF23A161FD00F26139 /* CRT.fsh in Resources */,
+				13997BDB1D8A799100B8F145 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		007FA3601DAC191800CF3350 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		4DEA425F833E224254525E5F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrocoDS/Pods-CrocoDS-resources.sh",
+				"${PODS_ROOT}/../../../crocods-core/boulder.rom",
+				"${PODS_ROOT}/../../../crocods-core/empty.dsk",
+				"${PODS_ROOT}/../../../crocods-core/resources/cpc6128.bin",
+				"${PODS_ROOT}/../../../crocods-core/resources/romdisc.bin",
+				"${PODS_ROOT}/../../../crocods-core/rompack.rom",
+				"${PODS_ROOT}/../../../crocods-core/xmass08P.rom",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/boulder.rom",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/empty.dsk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cpc6128.bin",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/romdisc.bin",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/rompack.rom",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/xmass08P.rom",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrocoDS/Pods-CrocoDS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C4CAF6A7EE2283C2FC53D03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrocoDS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13997B901D8A793600B8F145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13997BCE1D8A799100B8F145 /* Document.m in Sources */,
+				13997BDC1D8A799100B8F145 /* NSString+StringForKey.m in Sources */,
+				13807BAB23A161FD00F26139 /* GBViewMetal.m in Sources */,
+				13807BAC23A161FD00F26139 /* GBView.m in Sources */,
+				13997B9C1D8A793600B8F145 /* main.m in Sources */,
+				134995F21DB0CBD400DA8161 /* loadfile.c in Sources */,
+				13997BD21D8A799100B8F145 /* GBButtons.m in Sources */,
+				1338A7831DAD1B44007328DB /* ImporterDSK.m in Sources */,
+				13997BD61D8A799100B8F145 /* GBShader.m in Sources */,
+				13997BD11D8A799100B8F145 /* GBBorderView.m in Sources */,
+				134995EF1DB0CBD400DA8161 /* dissz80.c in Sources */,
+				13807BB123A164EE00F26139 /* MasterShader.metal in Sources */,
+				13C457561DB7B56600F231F5 /* spatial_color_quant.mm in Sources */,
+				00D2D50E1D9FFC4F009B65F8 /* CrocoApplication.m in Sources */,
+				13997BCA1D8A799100B8F145 /* AppDelegate.m in Sources */,
+				134995F51DB0CBD400DA8161 /* tables.c in Sources */,
+				001F6FEE1DA8FDF6002ED3F2 /* TapePlayerWindowController.m in Sources */,
+				134B8CA11DB0AA4F00FC5123 /* CrocoDebuggerPanel.m in Sources */,
+				13350B471E2908CB00AD9340 /* ManageDSK.m in Sources */,
+				13997BD51D8A799100B8F145 /* GBPreferencesWindow.m in Sources */,
+				136BFE4C1D9BFE5D001CA6A2 /* SSHCrocoApplication.m in Sources */,
+				134995ED1DB0CBD400DA8161 /* noscript.c in Sources */,
+				13997BD01D8A799100B8F145 /* GBAudioClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		13997BA31D8A793600B8F145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		13997BA41D8A793600B8F145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		13997BA61D8A793600B8F145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 454572CB493288261AFF12EF /* Pods-CrocoDS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X4F625256R;
+				INFOPLIST_FILE = "crocods-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.kyuran.crocods;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		13997BA71D8A793600B8F145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C8BAF627FB239B317DBFF0 /* Pods-CrocoDS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X4F625256R;
+				INFOPLIST_FILE = "crocods-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.kyuran.crocods;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13997B8F1D8A793600B8F145 /* Build configuration list for PBXProject "CrocoDS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13997BA31D8A793600B8F145 /* Debug */,
+				13997BA41D8A793600B8F145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13997BA51D8A793600B8F145 /* Build configuration list for PBXNativeTarget "CrocoDS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13997BA61D8A793600B8F145 /* Debug */,
+				13997BA71D8A793600B8F145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13997B8C1D8A793600B8F145 /* Project object */;
+}

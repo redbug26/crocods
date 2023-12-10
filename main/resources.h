@@ -1,0 +1,2 @@
+
+void listResources(void *core);

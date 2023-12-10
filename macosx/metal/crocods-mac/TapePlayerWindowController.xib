@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TapePlayerWindowController">
+            <connections>
+                <outlet property="buttonPlay" destination="mtM-zf-ovo" id="D8h-Oo-g8M"/>
+                <outlet property="buttonStop" destination="kxD-ZT-IO0" id="brk-aq-rc4"/>
+                <outlet property="positionSlider" destination="onc-vm-8mu" id="SRt-Tt-U3e"/>
+                <outlet property="window" destination="5Ug-9U-14B" id="boZ-Zp-BMd"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="TestPlayer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="5Ug-9U-14B">
+            <windowStyleMask key="styleMask" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="546" height="364"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <view key="contentView" wantsLayer="YES" id="Wa1-F2-fbw">
+                <rect key="frame" x="0.0" y="0.0" width="546" height="364"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mtM-zf-ovo">
+                        <rect key="frame" x="14" y="29" width="60" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="Usv-vc-drE"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bTz-hD-fhp">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="playButton:" target="-2" id="fS2-Ts-yWl"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-ZT-IO0">
+                        <rect key="frame" x="472" y="29" width="60" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="Zbf-3x-Ml6"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KEg-em-VyA">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="stopButton:" target="-2" id="BzN-0N-G36"/>
+                        </connections>
+                    </button>
+                    <slider identifier="positionSlider" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="onc-vm-8mu">
+                        <rect key="frame" x="18" y="75" width="510" height="19"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="b13-uV-YDd"/>
+                        <connections>
+                            <action selector="modifyPosition:" target="-2" id="k1Y-xP-dYA"/>
+                        </connections>
+                    </slider>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfw-af-F4D">
+                        <rect key="frame" x="517" y="339" width="21" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="inline" title="X" bezelStyle="inline" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iHm-I7-GMc">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystemBold"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="okButton:" target="-2" id="VDC-fh-ihh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mtM-zf-ovo" firstAttribute="leading" secondItem="onc-vm-8mu" secondAttribute="leading" id="1ua-1Q-YqQ"/>
+                    <constraint firstItem="kxD-ZT-IO0" firstAttribute="baseline" secondItem="mtM-zf-ovo" secondAttribute="baseline" id="CZC-D4-kJh"/>
+                    <constraint firstItem="onc-vm-8mu" firstAttribute="leading" secondItem="Wa1-F2-fbw" secondAttribute="leading" constant="20" symbolic="YES" id="PZS-08-3eQ"/>
+                    <constraint firstItem="kxD-ZT-IO0" firstAttribute="trailing" secondItem="onc-vm-8mu" secondAttribute="trailing" id="WCm-Hc-SYm"/>
+                    <constraint firstAttribute="bottom" secondItem="mtM-zf-ovo" secondAttribute="bottom" constant="36" id="cUT-t5-aRe"/>
+                    <constraint firstAttribute="trailing" secondItem="onc-vm-8mu" secondAttribute="trailing" constant="20" symbolic="YES" id="mCf-04-eKo"/>
+                    <constraint firstItem="mtM-zf-ovo" firstAttribute="top" secondItem="onc-vm-8mu" secondAttribute="bottom" constant="20" symbolic="YES" id="oy0-Z8-4Oy"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="gZC-Le-8ad"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="159"/>
+        </window>
+    </objects>
+</document>

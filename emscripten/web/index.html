@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html
+    class="crocods-bar-mobile crocods-started crocods-touch-active crocods-virtual-keyboard-active crocods-full-screen">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CrocoDS - Amstrad CPC emulator</title>
+
+    <!-- <base href="http://crocods.org/web/"> -->
+
+    <meta name="description" content="CrocoDS - The online Amstrad CPC emulator">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#363636">
+    <link rel="manifest" href="manifest.webapp">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" sizes="512x512" href="images/logo-icon512.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kyuran.be">
+    <meta property="og:title" content="CrocoDS - The online Amstrad CPC emulator">
+    <meta property="og:description" content="Play Amstrad CPC games in your browser, phone or tablet!">
+    <meta property="og:image" content="https://www.kyuran.be/crocods/img/logo-icon512.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kyuran">
+    <meta name="twitter:creator" content="@kyuran">
+    <meta name="twitter:url" content="https://www.kyuran.be">
+    <meta name="twitter:title" content="CrocoDS - The online Amstrad CPC emulator">
+    <meta name="twitter:description" content="Play Amstrad CPC games in your browser, phone or tablet!">
+    <meta name="twitter:image" content="https://www.kyuran.be/crocods/img/logo-icon512.png">
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    </link>
+
+    <style media="screen" type="text/css">
+        /*<![CDATA[*/
+        @import 'fonts/stylesheet.css';
+        /*]]>*/
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166968079-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-166968079-1');
+    </script>
+
+    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable = no">
+</head>
+
+
+
+<body>
+
+    <div id="dialog" title="Error" style="display:none">
+        <p>Couldn't open the <a id="dialogurl">URL</a>.</p>
+    </div>
+
+    <!-- <canvas class="game" id="canvas" oncontextmenu="event.preventDefault()"></canvas> -->
+
+
+
+    <div id="crocods">
+        <div id="crocods-screen" tabindex="-1">
+            <div id="crocods-screen-fs" tabindex="0" class="">
+                <div id="crocods-screen-fs-center" tabindex="-1">
+                    <div id="crocods-screen-canvas-outer"> <canvas id="canvas" tabindex="-1" width="544" height="456"
+                            style="width: 434px; height: 319px; image-rendering: initial;"></canvas>
+                        <div id="crocods-logo" class="">
+                            <div id="crocods-logo-center" style="transform: translate(-50%, -50%) scale(0.5712);">
+                                <div id="crocods-logo-message">
+                                    <div id="crocods-logo-message-text">For the best experience, use<br>the "Add to Home
+                                        Screen" function<br>then launch from the Installed App</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="crocods-bar" class="crocods-narrow crocods-semi-narrow crocods-hidden"
+                        style="width: 66%; transform: scale(1.5);">
+                        <div id="crocods-bar-inner">
+                            <div id="crocods-bar-media-icons" style="display: inline-block;">
+                                <div id="crocods-bar-diska" class="crocods-bar-button crocods-media-button"
+                                    title="Drive A" style="background-position: -165px -76px;"></div>
+                                <div id="crocods-bar-switchkey" class="crocods-bar-button crocods-media-button"
+                                    title="Keyboard" style="background-position: -237px -76px;" data-menuid="12"></div>
+                                <div id="crocods-bar-database" class="crocods-bar-button crocods-media-button"
+                                    title="Database" style="background-position: -189px -54px;" data-menuid="10"></div>
+                            </div>
+                            <div id="crocods-bar-logo" class="crocods-bar-button" title="About CrocoDS"
+                                style="background-position: 0px -28px;"></div>
+                            <div id="crocods-bar-settings-icons" style="display: inline-block;">
+                                <div id="crocods-bar-keyboard" class="crocods-bar-button"
+                                    title="Toggle Virtual Keyboard" style="background-position: -83px -28px;"></div>
+                                <div id="crocods-bar-gear" class="crocods-bar-button crocods-media-button"
+                                    title="Keyboard" style="background-position: -189px -76px;" data-menuid="10"></div>
+                                <div id="crocods-bar-fullscreen" class="crocods-bar-button crocods-media-button"
+                                    title="Keyboard" style="background-position: -262px -76px;"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="crocods-touch-left">
+                        <div class="crocods-touch-dir crocods-touch-dir-joy" id="crocods-touch-dir-left">
+                            <div class="crocods-joystick-key crocods-joystick-right"></div>
+                            <div class="crocods-joystick-key crocods-joystick-up"></div>
+                            <div class="crocods-joystick-key crocods-joystick-left"></div>
+                            <div class="crocods-joystick-key crocods-joystick-down"></div>
+                        </div>
+                    </div>
+                    <div id="crocods-touch-right">
+                        <div class="crocods-touch-dir-right" id="crocods-touch-dir-right">
+                            <div id="crocods-touch-T_F" class="crocods-touch-button crocods-touch-button-key">F1</div>
+                            <div id="crocods-touch-T_D" class="crocods-touch-button crocods-touch-button-key">ESC</div>
+                            <div id="crocods-touch-T_B"
+                                class="crocods-touch-button crocods-touch-button-joy crocods-touch-button-joy-B">B
+                            </div>
+                            <div id="crocods-touch-T_A"
+                                class="crocods-touch-button crocods-touch-button-joy crocods-touch-button-joy-A">A
+                            </div>
+                            <div id="crocods-touch-T_E" class="crocods-touch-button crocods-touch-button-key">SPC</div>
+                            <div id="crocods-touch-T_G" class="crocods-touch-button crocods-touch-button-key">RET</div>
+                        </div>
+                    </div>
+                    <div id="crocods-virtual-keyboard" style="width: 494px; transform: translateX(-50%) scale(0.5);">
+                        <div style="position: absolute;">
+                            <div class="crocods-keyboard-alpha">
+
+                                <div style="top: 0px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-escape crocods-keyboard-text crocods-keyboard-key-red"
+                                        style="width: 29px; left: 1px;">ESC</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d1"
+                                        style="width: 26px; left: 31px;">
+                                        !<br>1
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d2"
+                                        style="width: 26px; left: 58px;">"<br>2
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d3"
+                                        style="width: 26px; left: 85px;">#<br>3
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d4"
+                                        style="width: 26px; left: 112px;">$<br>4
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d5"
+                                        style="width: 26px; left: 139px;">%<br>5
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d6"
+                                        style="width: 26px; left: 166px;">&<br>6
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d7"
+                                        style="width: 26px; left: 193px;">'<br>7
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d8"
+                                        style="width: 26px; left: 220px;">(<br>8
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d9"
+                                        style="width: 26px; left: 247px;">)<br>9
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-d0"
+                                        style="width: 26px; left: 274px;">_<br>0
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-minus"
+                                        style="width: 26px; left: 301px;">=<br>-</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-equal"
+                                        style="width: 26px; left: 328px;">&pound;<br>&uarr;</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-backslash crocods-keyboard-text"
+                                        style="width: 26px; left: 355px;">CLR</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-backspace crocods-keyboard-text crocods-keyboard-key-green"
+                                        style="width: 28px; left: 382px;">DEL</div>
+                                </div>
+                                <div style="top: 25px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-tab crocods-keyboard-text crocods-keyboard-key-green"
+                                        style="width: 41px; left: 1px;">TAB</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-q"
+                                        style="width: 26px; left: 43px;">Q
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-w"
+                                        style="width: 26px; left: 70px;">W
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-e"
+                                        style="width: 26px; left: 97px;">E
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-r"
+                                        style="width: 26px; left: 124px;">R
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-t"
+                                        style="width: 26px; left: 151px;">T
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-y"
+                                        style="width: 26px; left: 178px;">Y
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-u"
+                                        style="width: 26px; left: 205px;">U
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-i"
+                                        style="width: 26px; left: 232px;">I
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-o"
+                                        style="width: 26px; left: 259px;">O
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-p"
+                                        style="width: 26px; left: 286px;">P
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-open_bracket"
+                                        style="width: 26px; left: 313px;">|<br>@</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-close_bracket"
+                                        style="width: 26px; left: 340px;">{<br>[</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-enter_x1 crocods-keyboard-key-blue"
+                                        style="width: 13px; left: 367px;"></div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-enter_x2 crocods-keyboard-key-blue"
+                                        style="width: 30px; left: 380px;"></div>
+                                </div>
+                                <div style="top: 50px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-control crocods-keyboard-text crocods-keyboard-key-green"
+                                        style="width: 48px; left: 1px;">CAPS</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-a"
+                                        style="width: 26px; left: 50px;">A
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-s"
+                                        style="width: 26px; left: 77px;">S
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-d"
+                                        style="width: 26px; left: 104px;">D
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-f"
+                                        style="width: 26px; left: 131px;">F
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-g"
+                                        style="width: 26px; left: 158px;">G
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-h"
+                                        style="width: 26px; left: 185px;">H
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-j"
+                                        style="width: 26px; left: 212px;">J
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-k"
+                                        style="width: 26px; left: 239px;">K
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-l"
+                                        style="width: 26px; left: 266px;">L
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-semicolon"
+                                        style="width: 26px; left: 293px;">*<br>:</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-quote"
+                                        style="width: 26px; left: 320px;">+<br>;</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-backquote"
+                                        style="width: 26px; left: 347px;">}<br>]</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-enter crocods-keyboard-text crocods-keyboard-key-blue"
+                                        style="width: 36px; left: 374px;">RETURN</div>
+                                </div>
+                                <div style="top: 75px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-shift crocods-keyboard-text crocods-keyboard-key-green"
+                                        style="width: 61px; left: 1px;">SHIFT</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-z"
+                                        style="width: 26px; left: 63px;">Z
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-x"
+                                        style="width: 26px; left: 90px;">X
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-c"
+                                        style="width: 26px; left: 117px;">C
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-v"
+                                        style="width: 26px; left: 144px;">V
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-b"
+                                        style="width: 26px; left: 171px;">B
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-n"
+                                        style="width: 26px; left: 198px;">N
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-m"
+                                        style="width: 26px; left: 225px;">M
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-comma"
+                                        style="width: 26px; left: 252px;">&lt;<br>,</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-period"
+                                        style="width: 26px; left: 279px;">&gt;<br>.</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-slash"
+                                        style="width: 26px; left: 306px;">?<br>/</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-text2line crocods-keyboard-dead">
+                                        `<br>\
+                                    </div>
+                                    <div
+                                        class="crocods-keyboard-key crocods-keyboard-shift2 crocods-keyboard-text crocods-keyboard-key-green">
+                                        SHIFT
+                                    </div>
+                                </div>
+                                <div style="top: 100px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-capslock crocods-keyboard-text crocods-keyboard-key-green"
+                                        style="width: 54px; left: 1px;">CONTROL</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-graph crocods-keyboard-text crocods-keyboard-key-dark"
+                                        style="width: 46px; left: 56px;">COPY</div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-space"></div>
+                                    <div
+                                        class="crocods-keyboard-key crocods-keyboard-code crocods-keyboard-text crocods-keyboard-key-green">
+                                        ENTER
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="crocods-keyboard-num">
+                                <div style="top: 0px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_7"
+                                        style="width: 22px; left: 1px;">
+                                        <i>f</i> 7
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_8"
+                                        style="width: 22px; left: 24px;">
+                                        <i>f</i> 8
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_9"
+                                        style="width: 22px; left: 47px;">
+                                        <i>f</i> 9
+                                    </div>
+
+                                </div>
+                                <div style="top: 25px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_4"
+                                        style="width: 22px; left: 1px;">
+                                        <i>f</i> 4
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_5"
+                                        style="width: 22px; left: 24px;">
+                                        <i>f</i> 5
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_6"
+                                        style="width: 22px; left: 47px;">
+                                        <i>f</i> 6
+                                    </div>
+                                </div>
+                                <div style="top: 50px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_1"
+                                        style="width: 22px; left: 1px;">
+                                        <i>f</i> 1
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_2"
+                                        style="width: 22px; left: 24px;">
+                                        <i>f</i> 2
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_3"
+                                        style="width: 22px; left: 47px;">
+                                        <i>f</i> 3
+                                    </div>
+                                </div>
+                                <div style="top: 75px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_0"
+                                        style="width: 22px; left: 1px;">
+                                        <i>f</i> 0
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-up"
+                                        style="width: 22px; left: 24px;">
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-num_period"
+                                        style="width: 22px; left: 47px;">.</div>
+                                </div>
+                                <div style="top: 100px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-left"
+                                        style="width: 22px; left: 1px;">
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-down"
+                                        style="width: 22px; left: 24px;">
+                                    </div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-right"
+                                        style="width: 22px; left: 47px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="crocods-keyboard-arrows">
+                                <div style="top: 0px;">
+                                    <div class="crocods-keyboard-key crocods-keyboard-left"></div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-up"></div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-right"></div>
+                                    <div class="crocods-keyboard-key crocods-keyboard-down"></div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                </div>
+                <div id="crocods-screen-scroll-message"> Swipe up/down on the Screen <br>to hide the browser bars!
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="main">
+        <span id="doc">
+            <table width="100%">
+                <tr>
+                    <td width="33%">CTRL: CrocoDS menu</td>
+                    <td width="33%"><img src="img/logo.png"></td>
+                    <td width="33%">DEL: Virtual Keyboard</td>
+                </tr>
+                <tr>
+                    <td width="33%">arrow; joy arrow</td>
+                    <td width="33%">x,c: joy button 1,2</td>
+                    <td width="33%">TAB: Resize</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Drag any .sna, .dsk, .bas, .zip file on the main screen to run it</td>
+                </tr>
+            </table>
+        </span>
+    </div>
+
+    <script async type="text/javascript" src="hello.js"></script>
+    <script type='text/javascript' src='config.js'></script>
+    <script type='text/javascript' src="js/crocods.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+
+
+SOURCES     = $(wildcard resources/*.gif)
+
+
+CFILE 		= ${SOURCES:.gif=.c}
+
+
+all: ${CFILE}
+
+
+%.c: %.gif
+	/Users/miguelvanhove/Dropbox/Sources/cpc/brixen/stuff/a.out resources/$(notdir $(basename $@)).gif gif_$(notdir $(basename $@)).c $(notdir $(basename $@))_gif
+
+#${CFILE}	: ${SOURCES}
+#		echo ${SOURCES}
+
+#/Users/miguelvanhove/Dropbox/Sources/cpc/brixen/stuff/a.out icons8.gif ../icons8.gif.c icons8_gif

@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		134A5298240FD2F3005F131C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A5297240FD2F3005F131C /* AppDelegate.m */; };
+		134A529B240FD2F3005F131C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A529A240FD2F3005F131C /* SceneDelegate.m */; };
+		134A529E240FD2F3005F131C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A529D240FD2F3005F131C /* ViewController.m */; };
+		134A52A1240FD2F3005F131C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134A529F240FD2F3005F131C /* Main.storyboard */; };
+		134A52A3240FD2F7005F131C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 134A52A2240FD2F7005F131C /* Assets.xcassets */; };
+		134A52A6240FD2F7005F131C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134A52A4240FD2F7005F131C /* LaunchScreen.storyboard */; };
+		134A52A9240FD2F7005F131C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A52A8240FD2F7005F131C /* main.m */; };
+		1385CFD8242A07E400F07256 /* DefinedUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385CFD7242A07E400F07256 /* DefinedUIApplication.m */; };
+		1396C9D22410ED8800B625C2 /* key_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9CA2410ED8800B625C2 /* key_select.png */; };
+		1396C9D32410ED8800B625C2 /* key_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9CB2410ED8800B625C2 /* key_start.png */; };
+		1396C9D42410ED8800B625C2 /* key_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9CC2410ED8800B625C2 /* key_right.png */; };
+		1396C9D52410ED8800B625C2 /* key_a.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9CD2410ED8800B625C2 /* key_a.png */; };
+		1396C9D62410ED8800B625C2 /* key_b.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9CE2410ED8800B625C2 /* key_b.png */; };
+		1396C9D72410ED8800B625C2 /* key_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9CF2410ED8800B625C2 /* key_left.png */; };
+		1396C9D82410ED8800B625C2 /* key_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9D02410ED8800B625C2 /* key_up.png */; };
+		1396C9D92410ED8800B625C2 /* key_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9D12410ED8800B625C2 /* key_down.png */; };
+		1396C9DE24110AC100B625C2 /* key_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9DA24110AC000B625C2 /* key_r.png */; };
+		1396C9DF24110AC100B625C2 /* key_x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9DB24110AC100B625C2 /* key_x.png */; };
+		1396C9E024110AC100B625C2 /* key_l.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9DC24110AC100B625C2 /* key_l.png */; };
+		1396C9E124110AC100B625C2 /* key_y.png in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9DD24110AC100B625C2 /* key_y.png */; };
+		1396C9EC24112D1F00B625C2 /* GBViewMetal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1396C9E424112D1F00B625C2 /* GBViewMetal.m */; };
+		1396C9ED24112D1F00B625C2 /* GBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1396C9E524112D1F00B625C2 /* GBView.m */; };
+		1396C9EE24112D1F00B625C2 /* NearestNeighbor.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9E724112D1F00B625C2 /* NearestNeighbor.fsh */; };
+		1396C9EF24112D1F00B625C2 /* LCD.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9E824112D1F00B625C2 /* LCD.fsh */; };
+		1396C9F024112D1F00B625C2 /* CRT.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9E924112D1F00B625C2 /* CRT.fsh */; };
+		1396C9F124112D1F00B625C2 /* MasterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1396C9EA24112D1F00B625C2 /* MasterShader.metal */; };
+		1396C9F524112D8400B625C2 /* MasterShader.metal in Resources */ = {isa = PBXBuildFile; fileRef = 1396C9EA24112D1F00B625C2 /* MasterShader.metal */; };
+		13CA55FC241151B4003F0DC5 /* key_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13CA55FA241151B4003F0DC5 /* key_select@2x.png */; };
+		13CA55FD241151B4003F0DC5 /* key_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13CA55FB241151B4003F0DC5 /* key_start@2x.png */; };
+		13CA560024124CB3003F0DC5 /* GBAudioClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CA55FF24124CB3003F0DC5 /* GBAudioClient.m */; };
+		13CA560424128E31003F0DC5 /* GBKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CA560324128E31003F0DC5 /* GBKeyboard.m */; };
+		7A3A343976583AC4062B65A7 /* libPods-crocods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F911F898FCF733F63F4F54E8 /* libPods-crocods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D7DE6B7FEECE13D406F715A /* Pods-crocods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crocods.release.xcconfig"; path = "Target Support Files/Pods-crocods/Pods-crocods.release.xcconfig"; sourceTree = "<group>"; };
+		134A5293240FD2F3005F131C /* CrocoDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrocoDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		134A5296240FD2F3005F131C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		134A5297240FD2F3005F131C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		134A5299240FD2F3005F131C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		134A529A240FD2F3005F131C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		134A529C240FD2F3005F131C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		134A529D240FD2F3005F131C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		134A52A0240FD2F3005F131C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		134A52A2240FD2F7005F131C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		134A52A5240FD2F7005F131C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		134A52A7240FD2F7005F131C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		134A52A8240FD2F7005F131C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1385CFD6242A07E400F07256 /* DefinedUIApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefinedUIApplication.h; sourceTree = "<group>"; };
+		1385CFD7242A07E400F07256 /* DefinedUIApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefinedUIApplication.m; sourceTree = "<group>"; };
+		1396C9CA2410ED8800B625C2 /* key_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_select.png; sourceTree = "<group>"; };
+		1396C9CB2410ED8800B625C2 /* key_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_start.png; sourceTree = "<group>"; };
+		1396C9CC2410ED8800B625C2 /* key_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_right.png; sourceTree = "<group>"; };
+		1396C9CD2410ED8800B625C2 /* key_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_a.png; sourceTree = "<group>"; };
+		1396C9CE2410ED8800B625C2 /* key_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_b.png; sourceTree = "<group>"; };
+		1396C9CF2410ED8800B625C2 /* key_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_left.png; sourceTree = "<group>"; };
+		1396C9D02410ED8800B625C2 /* key_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_up.png; sourceTree = "<group>"; };
+		1396C9D12410ED8800B625C2 /* key_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_down.png; sourceTree = "<group>"; };
+		1396C9DA24110AC000B625C2 /* key_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_r.png; sourceTree = "<group>"; };
+		1396C9DB24110AC100B625C2 /* key_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_x.png; sourceTree = "<group>"; };
+		1396C9DC24110AC100B625C2 /* key_l.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_l.png; sourceTree = "<group>"; };
+		1396C9DD24110AC100B625C2 /* key_y.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_y.png; sourceTree = "<group>"; };
+		1396C9E324112D1F00B625C2 /* GBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBView.h; sourceTree = "<group>"; };
+		1396C9E424112D1F00B625C2 /* GBViewMetal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBViewMetal.m; sourceTree = "<group>"; };
+		1396C9E524112D1F00B625C2 /* GBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBView.m; sourceTree = "<group>"; };
+		1396C9E724112D1F00B625C2 /* NearestNeighbor.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NearestNeighbor.fsh; sourceTree = "<group>"; };
+		1396C9E824112D1F00B625C2 /* LCD.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LCD.fsh; sourceTree = "<group>"; };
+		1396C9E924112D1F00B625C2 /* CRT.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CRT.fsh; sourceTree = "<group>"; };
+		1396C9EA24112D1F00B625C2 /* MasterShader.metal */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = MasterShader.metal; sourceTree = "<group>"; };
+		1396C9EB24112D1F00B625C2 /* GBViewMetal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBViewMetal.h; sourceTree = "<group>"; };
+		13C2FA5A24911C210066E1BB /* brixen.cpr */ = {isa = PBXFileReference; lastKnownFileType = file; path = brixen.cpr; sourceTree = "<group>"; };
+		13C2FA5C24911C390066E1BB /* crocods.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crocods.ini; sourceTree = "<group>"; };
+		13CA55FA241151B4003F0DC5 /* key_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key_select@2x.png"; sourceTree = "<group>"; };
+		13CA55FB241151B4003F0DC5 /* key_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key_start@2x.png"; sourceTree = "<group>"; };
+		13CA55FE24124CB3003F0DC5 /* GBAudioClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBAudioClient.h; path = "../../../macosx/metal/crocods-mac/GBAudioClient.h"; sourceTree = "<group>"; };
+		13CA55FF24124CB3003F0DC5 /* GBAudioClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBAudioClient.m; path = "../../../macosx/metal/crocods-mac/GBAudioClient.m"; sourceTree = "<group>"; };
+		13CA5601241289EE003F0DC5 /* crocods.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = crocods.entitlements; sourceTree = "<group>"; };
+		13CA560224128E31003F0DC5 /* GBKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBKeyboard.h; sourceTree = "<group>"; };
+		13CA560324128E31003F0DC5 /* GBKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBKeyboard.m; sourceTree = "<group>"; };
+		13CD84A724AA311B0049F27C /* RW_IANNA_CPC_v10.rom */ = {isa = PBXFileReference; lastKnownFileType = file; path = RW_IANNA_CPC_v10.rom; sourceTree = "<group>"; };
+		60A238314E8FEC7386024E4F /* Pods-crocods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crocods.debug.xcconfig"; path = "Target Support Files/Pods-crocods/Pods-crocods.debug.xcconfig"; sourceTree = "<group>"; };
+		F911F898FCF733F63F4F54E8 /* libPods-crocods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-crocods.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		134A5290240FD2F3005F131C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3A343976583AC4062B65A7 /* libPods-crocods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134A528A240FD2F3005F131C = {
+			isa = PBXGroup;
+			children = (
+				134A5295240FD2F3005F131C /* crocods */,
+				134A5294240FD2F3005F131C /* Products */,
+				5B6A070B070D0801B3DC4344 /* Pods */,
+				7AB764646B106B61EE930FA3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		134A5294240FD2F3005F131C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				134A5293240FD2F3005F131C /* CrocoDS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		134A5295240FD2F3005F131C /* crocods */ = {
+			isa = PBXGroup;
+			children = (
+				13C2FA5924911C140066E1BB /* test */,
+				13CA5601241289EE003F0DC5 /* crocods.entitlements */,
+				1396C9E224112D1F00B625C2 /* framebuffer */,
+				1396C9C92410ED8800B625C2 /* Resources */,
+				134A5296240FD2F3005F131C /* AppDelegate.h */,
+				134A5297240FD2F3005F131C /* AppDelegate.m */,
+				134A5299240FD2F3005F131C /* SceneDelegate.h */,
+				134A529A240FD2F3005F131C /* SceneDelegate.m */,
+				134A529C240FD2F3005F131C /* ViewController.h */,
+				134A529D240FD2F3005F131C /* ViewController.m */,
+				134A529F240FD2F3005F131C /* Main.storyboard */,
+				134A52A2240FD2F7005F131C /* Assets.xcassets */,
+				134A52A4240FD2F7005F131C /* LaunchScreen.storyboard */,
+				134A52A7240FD2F7005F131C /* Info.plist */,
+				134A52A8240FD2F7005F131C /* main.m */,
+			);
+			path = crocods;
+			sourceTree = "<group>";
+		};
+		1396C9C92410ED8800B625C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13CA55FA241151B4003F0DC5 /* key_select@2x.png */,
+				13CA55FB241151B4003F0DC5 /* key_start@2x.png */,
+				1396C9DC24110AC100B625C2 /* key_l.png */,
+				1396C9DD24110AC100B625C2 /* key_y.png */,
+				1396C9DA24110AC000B625C2 /* key_r.png */,
+				1396C9DB24110AC100B625C2 /* key_x.png */,
+				1396C9CA2410ED8800B625C2 /* key_select.png */,
+				1396C9CB2410ED8800B625C2 /* key_start.png */,
+				1396C9CC2410ED8800B625C2 /* key_right.png */,
+				1396C9CD2410ED8800B625C2 /* key_a.png */,
+				1396C9CE2410ED8800B625C2 /* key_b.png */,
+				1396C9CF2410ED8800B625C2 /* key_left.png */,
+				1396C9D02410ED8800B625C2 /* key_up.png */,
+				1396C9D12410ED8800B625C2 /* key_down.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1396C9E224112D1F00B625C2 /* framebuffer */ = {
+			isa = PBXGroup;
+			children = (
+				1396C9E624112D1F00B625C2 /* Shaders */,
+				13CA55FE24124CB3003F0DC5 /* GBAudioClient.h */,
+				13CA55FF24124CB3003F0DC5 /* GBAudioClient.m */,
+				1396C9E324112D1F00B625C2 /* GBView.h */,
+				1396C9E524112D1F00B625C2 /* GBView.m */,
+				1396C9EB24112D1F00B625C2 /* GBViewMetal.h */,
+				1396C9E424112D1F00B625C2 /* GBViewMetal.m */,
+				13CA560224128E31003F0DC5 /* GBKeyboard.h */,
+				13CA560324128E31003F0DC5 /* GBKeyboard.m */,
+				1385CFD6242A07E400F07256 /* DefinedUIApplication.h */,
+				1385CFD7242A07E400F07256 /* DefinedUIApplication.m */,
+			);
+			name = framebuffer;
+			path = crocods/framebuffer;
+			sourceTree = SOURCE_ROOT;
+		};
+		1396C9E624112D1F00B625C2 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				1396C9EA24112D1F00B625C2 /* MasterShader.metal */,
+				1396C9E724112D1F00B625C2 /* NearestNeighbor.fsh */,
+				1396C9E824112D1F00B625C2 /* LCD.fsh */,
+				1396C9E924112D1F00B625C2 /* CRT.fsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		13C2FA5924911C140066E1BB /* test */ = {
+			isa = PBXGroup;
+			children = (
+				13C2FA5C24911C390066E1BB /* crocods.ini */,
+				13CD84A724AA311B0049F27C /* RW_IANNA_CPC_v10.rom */,
+				13C2FA5A24911C210066E1BB /* brixen.cpr */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		5B6A070B070D0801B3DC4344 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60A238314E8FEC7386024E4F /* Pods-crocods.debug.xcconfig */,
+				0D7DE6B7FEECE13D406F715A /* Pods-crocods.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7AB764646B106B61EE930FA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F911F898FCF733F63F4F54E8 /* libPods-crocods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		134A5292240FD2F3005F131C /* crocods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 134A52AC240FD2F7005F131C /* Build configuration list for PBXNativeTarget "crocods" */;
+			buildPhases = (
+				F1E58ECDB6FD2686DBCCF7FE /* [CP] Check Pods Manifest.lock */,
+				134A528F240FD2F3005F131C /* Sources */,
+				134A5290240FD2F3005F131C /* Frameworks */,
+				1362ED9624499D270004ACB5 /* ShellScript */,
+				134A5291240FD2F3005F131C /* Resources */,
+				6BC914FC2900059D3FF4AF72 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = crocods;
+			productName = crocods;
+			productReference = 134A5293240FD2F3005F131C /* CrocoDS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		134A528B240FD2F3005F131C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Miguel Vanhove";
+				TargetAttributes = {
+					134A5292240FD2F3005F131C = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 134A528E240FD2F3005F131C /* Build configuration list for PBXProject "crocods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 134A528A240FD2F3005F131C;
+			productRefGroup = 134A5294240FD2F3005F131C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				134A5292240FD2F3005F131C /* crocods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		134A5291240FD2F3005F131C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1396C9F524112D8400B625C2 /* MasterShader.metal in Resources */,
+				1396C9D22410ED8800B625C2 /* key_select.png in Resources */,
+				1396C9D52410ED8800B625C2 /* key_a.png in Resources */,
+				1396C9EE24112D1F00B625C2 /* NearestNeighbor.fsh in Resources */,
+				1396C9D42410ED8800B625C2 /* key_right.png in Resources */,
+				1396C9E024110AC100B625C2 /* key_l.png in Resources */,
+				134A52A6240FD2F7005F131C /* LaunchScreen.storyboard in Resources */,
+				1396C9DF24110AC100B625C2 /* key_x.png in Resources */,
+				1396C9EF24112D1F00B625C2 /* LCD.fsh in Resources */,
+				1396C9E124110AC100B625C2 /* key_y.png in Resources */,
+				1396C9F024112D1F00B625C2 /* CRT.fsh in Resources */,
+				134A52A3240FD2F7005F131C /* Assets.xcassets in Resources */,
+				1396C9DE24110AC100B625C2 /* key_r.png in Resources */,
+				13CA55FC241151B4003F0DC5 /* key_select@2x.png in Resources */,
+				1396C9D32410ED8800B625C2 /* key_start.png in Resources */,
+				1396C9D82410ED8800B625C2 /* key_up.png in Resources */,
+				134A52A1240FD2F3005F131C /* Main.storyboard in Resources */,
+				1396C9D62410ED8800B625C2 /* key_b.png in Resources */,
+				1396C9D72410ED8800B625C2 /* key_left.png in Resources */,
+				1396C9D92410ED8800B625C2 /* key_down.png in Resources */,
+				13CA55FD241151B4003F0DC5 /* key_start@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1362ED9624499D270004ACB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n\n\n";
+		};
+		6BC914FC2900059D3FF4AF72 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-crocods/Pods-crocods-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-crocods/Pods-crocods-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-crocods/Pods-crocods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1E58ECDB6FD2686DBCCF7FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-crocods-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		134A528F240FD2F3005F131C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13CA560024124CB3003F0DC5 /* GBAudioClient.m in Sources */,
+				1396C9F124112D1F00B625C2 /* MasterShader.metal in Sources */,
+				1396C9EC24112D1F00B625C2 /* GBViewMetal.m in Sources */,
+				134A529E240FD2F3005F131C /* ViewController.m in Sources */,
+				134A5298240FD2F3005F131C /* AppDelegate.m in Sources */,
+				1385CFD8242A07E400F07256 /* DefinedUIApplication.m in Sources */,
+				134A52A9240FD2F7005F131C /* main.m in Sources */,
+				13CA560424128E31003F0DC5 /* GBKeyboard.m in Sources */,
+				134A529B240FD2F3005F131C /* SceneDelegate.m in Sources */,
+				1396C9ED24112D1F00B625C2 /* GBView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		134A529F240FD2F3005F131C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				134A52A0240FD2F3005F131C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		134A52A4240FD2F7005F131C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				134A52A5240FD2F7005F131C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		134A52AA240FD2F7005F131C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					TARGET_OS_IOS,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		134A52AB240FD2F7005F131C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_OS_IOS;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		134A52AD240FD2F7005F131C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A238314E8FEC7386024E4F /* Pods-crocods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = crocods/crocods.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = X4F625256R;
+				INFOPLIST_FILE = crocods/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.kyuran.crocods;
+				PRODUCT_NAME = CrocoDS;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		134A52AE240FD2F7005F131C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D7DE6B7FEECE13D406F715A /* Pods-crocods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = crocods/crocods.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = X4F625256R;
+				INFOPLIST_FILE = crocods/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.kyuran.crocods;
+				PRODUCT_NAME = CrocoDS;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		134A528E240FD2F3005F131C /* Build configuration list for PBXProject "crocods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				134A52AA240FD2F7005F131C /* Debug */,
+				134A52AB240FD2F7005F131C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		134A52AC240FD2F7005F131C /* Build configuration list for PBXNativeTarget "crocods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				134A52AD240FD2F7005F131C /* Debug */,
+				134A52AE240FD2F7005F131C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 134A528B240FD2F3005F131C /* Project object */;
+}

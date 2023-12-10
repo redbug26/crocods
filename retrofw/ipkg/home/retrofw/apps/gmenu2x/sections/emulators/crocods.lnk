@@ -1,0 +1,6 @@
+title=CrocoDS
+description=Amstrad CPC Emulator
+exec=/home/retrofw/emus/crocods/crocods.dge
+clock=600
+selectordir=/home/retrofw/roms/amstrad
+selectorfilter=.dsk,.sna,.zip

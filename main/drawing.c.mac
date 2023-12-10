@@ -1,0 +1,213 @@
+#include "drawing.h"
+
+#if defined(GCW)
+#define BITDEPTH_OSWAN     16
+#define FLAG_VIDEO         SDL_SWSURFACE
+#define REAL_SCREEN_WIDTH  320
+#define REAL_SCREEN_HEIGHT 240
+#elif defined(BITTBOY)
+#define BITDEPTH_OSWAN     16
+#define FLAG_VIDEO         SDL_HWSURFACE
+#define REAL_SCREEN_WIDTH  320
+#define REAL_SCREEN_HEIGHT 240
+#elif defined(RS97)
+#define BITDEPTH_OSWAN     16
+#define FLAG_VIDEO         SDL_HWSURFACE
+#define REAL_SCREEN_WIDTH  320
+#define REAL_SCREEN_HEIGHT 240
+#elif defined(DREAMCAST)
+#define BITDEPTH_OSWAN     16
+#define FLAG_VIDEO         SDL_SWSURFACE
+#define REAL_SCREEN_WIDTH  320
+#define REAL_SCREEN_HEIGHT 240
+#else
+#define BITDEPTH_OSWAN     16
+#define FLAG_VIDEO         SDL_HWSURFACE |  SDL_RESIZABLE |  SDL_DOUBLEBUF
+#define REAL_SCREEN_WIDTH  320
+#define REAL_SCREEN_HEIGHT 240
+#endif /* if defined(GCW) */
+
+
+void SetVideo(void)
+{
+    int32_t flags = FLAG_VIDEO;
+    uint16_t w = 320, h = 240;
+
+
+    int ret = SDL_Init(SDL_INIT_VIDEO);
+
+    printf("init ret: %d\n", ret);
+
+#ifdef TARGET_OS_MAC
+    SDL_Window *screen = SDL_CreateWindow("Ma fenêtre de jeu",
+                                          SDL_WINDOWPOS_UNDEFINED,
+                                          SDL_WINDOWPOS_UNDEFINED,
+                                          w, h,
+                                          SDL_WINDOW_FULLSCREEN | SDL_WINDOW_OPENGL);
+#endif
+
+#ifdef GCW
+    SDL_ShowCursor(SDL_DISABLE);
+    actualScreen = SDL_SetVideoMode(w, h, BITDEPTH_OSWAN, flags);
+
+#endif
+
+    // printf("pix: %x\n", actualScreen->pixels);
+
+
+    // actualScreen = SDL_GetVideoSurface();
+    // printf("pix: %x\n", actualScreen->pixels);
+
+    // SDL_FillRect(actualScreen, NULL, 0);
+
+
+} /* SetVideo */
+
+
+
+void screen_draw(core_crocods_t *core)
+{
+    uint16_t *buffer_scr = (uint16_t *)actualScreen->pixels;
+
+    printf("%x bpp:%d\n", buffer_scr, actualScreen->format->BytesPerPixel);
+
+    SDL_LockSurface(actualScreen);
+
+    int x, y;
+
+    if (core->resize == 2) {
+        // ID_SCREEN_320
+
+        for (y = 0; y < 200; y++) {
+            memcpy(buffer_scr + 320 * 20 + y * 320, core->MemBitmap + y * core->MemBitmap_width, 320 * 2);
+        }
+
+        // char pos[]={10,8,6,4,3,3,2,2,1,1};
+        char pos[] = {10, 7, 5, 4, 3, 2, 2, 1, 1, 1};
+
+        uint16_t col = core->MemBitmap[0];
+
+        for (y = 0; y < 20; y++) {
+            for (x = 0; x < 320; x++) {
+                buffer_scr[x + y * 320] = col;
+                buffer_scr[x + (y + 220) * 320] = col;
+            }
+        }
+
+        for (y = 0; y < 10; y++) {
+            for (x = 0; x < pos[y]; x++) {
+                buffer_scr[x + y * 320] = 0;
+                buffer_scr[(319 - x) + y * 320] = 0;
+                buffer_scr[x + (239 - y) * 320] = 0;
+                buffer_scr[(319 - x) + (239 - y) * 320] = 0;
+            }
+        }
+    }
+
+    if (core->resize == 1) {   // TODO: improve resize
+        // ID_SCREEN_AUTO
+
+        // int width = core->screenBufferWidth;
+        // if (width > 320)
+        //  width = 320;
+
+        // for (y = 0; y < 200; y++)
+        // {
+        //  memcpy(buffer_scr + 320 * 20 + y * 320, core->MemBitmap + y * core->MemBitmap_width, width * 2);
+        // }
+
+        for (y = 0; y < 240; y++) {
+            for (x = 0; x < 320; x++) {
+                int pos = (x * core->screenBufferWidth) / 320 + ((y * core->screenBufferHeight) / 240) * core->screenBufferWidth;
+
+                *buffer_scr = core->MemBitmap[pos];
+                buffer_scr++;
+            }
+        }
+    }
+
+    if (core->resize == 4) {   // TODO: improve resize
+        // ID_SCREEN_OVERSCAN
+
+        for (y = 0; y < 240; y++) {
+            for (x = 0; x < 320; x++) {
+                int pos = (x * 384) / 320 + ((y * 272) / 240) * 384;
+
+                *buffer_scr = core->MemBitmap[pos];
+                buffer_scr++;
+            }
+        }
+    }
+
+    /*
+     * static char buffer[4];
+     * if (GameConf.m_DisplayFPS)
+     * {
+     *      if (GameConf.m_ScreenRatio == 2 || GameConf.m_ScreenRatio == 0)
+     *      {
+     *              SDL_Rect pos;
+     *              pos.x = 0;
+     *              pos.y = 0;
+     *              pos.w = 17;
+     *              pos.h = 16;
+     *              SDL_FillRect(actualScreen, &pos, 0);
+     *      }
+     *      sprintf(buffer,"%d",FPS);
+     *      print_string_video(2,2,buffer);
+     * }
+     */
+
+    // Draw icon
+
+    if (core->iconTimer > 0) {
+        int x, y;
+        int dispiconX = core->iconToDislay / 16;
+        int dispiconY = core->iconToDislay % 16;
+
+        buffer_scr = (uint16_t *)actualScreen->pixels + (8 * 320) + 8;
+
+        for (y = 0; y < 32; y++) {
+            for (x = 0; x < 32; x++) {
+                u16 car;
+                car = core->icons[(x + dispiconX * 32) + (y + dispiconY * 32) * 448];
+                if (car != 33840) {
+                    *buffer_scr = car;
+                }
+                buffer_scr++;
+            }
+
+            buffer_scr += (320 - 32);
+        }
+
+        // dispIcon(core, 0, 0, core->iconToDislay / 16, core->iconToDislay % 16, 0);
+        core->iconTimer--;
+    }
+
+    if (core->overlayBitmap_width != 0) {
+        buffer_scr = (uint16_t *)actualScreen->pixels;
+
+        for (y = 0; y < core->overlayBitmap_height; y++) {
+            u16 *dest = buffer_scr + 320 * core->overlayBitmap_posy + core->overlayBitmap_posx + y * 320;
+            u16 *src = core->overlayBitmap + y * 320;
+            for (x = 0; x < core->overlayBitmap_width; x++) {
+                u16 car = *src;
+                if (car != 63519) {               // RGB565(255,0,255)
+                    *dest = car;
+                }
+                dest++;
+                src++;
+            }
+        }
+    }
+
+    memset(actualScreen->pixels, rand(), 320 * 200);
+
+    SDL_UnlockSurface(actualScreen);
+
+#ifdef TARGET_OS_MAC
+    SDL_UpdateRect(actualScreen, 0, 0, 320, 240);
+#endif
+
+    SDL_Flip(actualScreen);
+} /* screen_draw */
+

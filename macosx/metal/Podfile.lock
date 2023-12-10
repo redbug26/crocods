@@ -1,0 +1,27 @@
+PODS:
+  - CrocoDS-Core (1.0)
+  - NMSSH (2.3.1)
+  - zipzap (8.1.1)
+
+DEPENDENCIES:
+  - CrocoDS-Core (from `../..`)
+  - NMSSH (~> 2.2)
+  - zipzap (~> 8.1)
+
+SPEC REPOS:
+  trunk:
+    - NMSSH
+    - zipzap
+
+EXTERNAL SOURCES:
+  CrocoDS-Core:
+    :path: "../.."
+
+SPEC CHECKSUMS:
+  CrocoDS-Core: 205cb4ace7495600235b99a44de0e36ab87f2471
+  NMSSH: cd689ae535a1581a6dd9fd4600ff71247df510a6
+  zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
+
+PODFILE CHECKSUM: 50c69239d8228c6b58a0f373578804c42b2fe706
+
+COCOAPODS: 1.8.3
