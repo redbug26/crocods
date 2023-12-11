@@ -2,6 +2,9 @@
 
 #include "os.h"
 
+#include <unistd.h> // for ftruncate
+
+
 // ----- Editor (based on textEd: https://github.com/gauri-singh/textEd)
 
 

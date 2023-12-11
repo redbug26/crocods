@@ -31,7 +31,7 @@ EXT         =.exe
 endif
 
 ifeq ($(OS), windowsdebug)
-CFLAGS 		=-Wno-format-overflow
+CFLAGS 		=-Wno-format-overflow 
 LDFLAGS     =-lstdc++ -mthreads -static
 # LDFLAGS_GUI =-mwindows
 LDFLAGS_LUA =-DLUA_USE_WINDOWS
@@ -89,7 +89,7 @@ TOOLSSOURCES = ${TOOLSMAIN} ${CROCODS} obj/lua.a obj/rasm.a obj/hxcmod.a obj/lib
 
 ${EMUL}	: ${EMULSOURCES}
 	@echo "Making ${EMUL}"
-	@echo "Cmd ${CC} -o ${EMUL} ${EMULSOURCES} ${CFLAGS} ${LDFLAGS} ${LDFLAGS_GUI} ${SDL_CFLAGS} ${SDL_LDFLAGS}"
+# @echo "Cmd ${CC} -o ${EMUL} ${EMULSOURCES} ${CFLAGS} ${LDFLAGS} ${LDFLAGS_GUI} ${SDL_CFLAGS} ${SDL_LDFLAGS}"
 	@${CC} -o ${EMUL} ${EMULSOURCES} ${CFLAGS} ${LDFLAGS} ${LDFLAGS_GUI} ${SDL_CFLAGS} ${SDL_LDFLAGS} 
 
 ${TOOLS} : ${TOOLSSOURCES}

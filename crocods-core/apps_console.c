@@ -3263,9 +3263,6 @@ void kReadfolder_local(fark_fs_t *fs)
             break;
         }
 
-        printf("CDbinding (1): %s\n", directory);
-        printf("CDbinding (2): %s\n", dir->d_name);
-
         strcpy(filename, directory);
         path2Abs(filename, dir->d_name);
         stat(filename, &s);

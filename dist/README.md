@@ -63,7 +63,46 @@ Switch to LUA console
 
 // to be added
 
+### Main module ###
+
+exit
+
+dir
+
+cd
+
+rect
+
+run
+
+ed
+
+pngload
+
+btn
+
+btnp
+
+cls
+
+window
+
+locate
+
+cat
+
+hex
+
+diff
+
+switchmainfs
+
+switchapplifs
+
 ### Module cpc ####
+
+
+
 
 #### load ####
 
@@ -140,6 +179,19 @@ Example:
 Dump Basic memory:
 ```cpc.dump(0x170)```
 
+
+    {"info",    cpcInfoBinding},
+    {"prnbuf",  cpcPrnbufBinding},
+    {"prnwrite",  cpcPrnwriteBinding},
+    {"basictext", cpcBasicTextBinding},
+    {"memfind",  cpcMemfindBinding},
+    {"memmark",  cpcMemmarkBinding},
+    {"memory",  cpcMemoryBinding},
+    {"key",  cpcKeyBinding},
+    {"runframe",  cpcRunFrameBinding},
+    {"setscancode",  cpcSetScanCodeBinding},
+    {"clearscancode",  cpcClearScanCodeBinding},
+
 ### Module fs ###
 
 #### cd ####
@@ -149,6 +201,22 @@ Usage:
 cd (**folder**)
 
 Change current directory to folder. If used without parameters, it sync the current folder with the media folder from the Amstrad.
+
+
+{"download", fs_download},
+    {"pwd", currentDirBinding},
+    {"resolve", resolveBinding},
+
+    static const luaL_Reg ziklib[] = {
+    {"load", zikLoadBinding},
+    {"play", zikPlayBinding},
+    {"stop", zikStopBinding},
+
+    static const luaL_Reg spritelib[] = {
+    {"text", spritetextBinding},
+    {"map",  spritemapBinding},
+    {"disp", spritedispBinding},
+    {"load", spriteloadBinding},
 
 * * *
 

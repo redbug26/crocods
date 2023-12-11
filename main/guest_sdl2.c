@@ -258,7 +258,11 @@ void guestInit(void)
     fmt.format = AUDIO_F32LSB;
 #endif
 
-    // samples = fmt.samples;
+
+// #define  AUDIO_U16LSB   0x0010
+// #define  AUDIO_S16LSB   0x8010
+// #define  AUDIO_U16MSB   0x1010
+// #define  AUDIO_S16MSB   0x9010
 
     int i, count = SDL_GetNumAudioDevices(0);
 
@@ -275,7 +279,7 @@ void guestInit(void)
     }
 
     if (retFmt.format != fmt.format) {
-        ddlog(&gb, 2, "We didn't get the audio format (%d vs %d)\n", retFmt.format, fmt.format);
+        ddlog(&gb, 2, "We didn't get the audio format (%04X vs %04X)\n", retFmt.format, fmt.format);
     }
 
     switch (retFmt.format) {
