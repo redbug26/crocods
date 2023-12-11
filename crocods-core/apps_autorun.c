@@ -842,7 +842,7 @@ void LireDiskMem(core_crocods_t *core, u8 *rom, u32 romsize)
 
                 int l = ( Dir.NbPages + 7 ) >> 3;
                 for ( int j = 0; j < l; j++ ) {
-                    int TailleBloc = 1024;
+                    // int TailleBloc = 1024;
                     unsigned char *p = idsk_readBloc(rom, Dir.Blocks[j]);
                     if ( FirstBlock ) {
                         if ( idsk_checkAmsdos(p) ) {
@@ -854,8 +854,8 @@ void LireDiskMem(core_crocods_t *core, u8 *rom, u32 romsize)
 
                             haveAmsdos = 1;
 
-                            TailleBloc -= sizeof( idsk_StAmsdos );
-                            memcpy(p, &p[ 0x80 ], TailleBloc);
+                            // TailleBloc -= sizeof( idsk_StAmsdos );
+                            // memcpy(p, &p[ 0x80 ], TailleBloc);
 
                             // printf("(found)");
                         }

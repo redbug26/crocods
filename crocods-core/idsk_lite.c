@@ -748,7 +748,7 @@ char idsk_onViewFic(u8 *ImgDsk, int nItem,  u8 *BufFile, u32 TailleFic)
                     // u16 AdresseExec = p[ 0x1a + 1 ] * 256 + p[ 0x1a ];
 
                     TailleBloc -= sizeof( idsk_StAmsdos );
-                    memcpy(p, &p[ 0x80 ], TailleBloc);
+                    // memcpy(p, &p[ 0x80 ], TailleBloc);
                 }
                 FirstBlock = 0;
 

@@ -656,10 +656,10 @@ void editorOpen(char *filename)
         return; // TODO: error message
     }
 
-    char *line = NULL;
-    size_t linecap = 0;
+    char line[1024];
+    // size_t linecap = 0;
 
-    while (fgets(line, linecap, fp)) {
+    while (fgets(line, sizeof(line), fp) != NULL) {
         size_t linelen = strlen(line);
 
         while (linelen > 0 && (line[linelen - 1] == '\n' || line[linelen - 1] == '\r'))
@@ -668,7 +668,6 @@ void editorOpen(char *filename)
         editorInsertRow(E.numrows, line, linelen);
     }
 
-    free(line);
     fclose(fp);
     E.dirty = 0;
 } /* editorOpen */

@@ -17,7 +17,8 @@
 #define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdarg.h>
-#include <dirent.h>
+
+#include "gen_dirent.h"
 
 #include "miniz.h"
 #include "idsk_lite.h"

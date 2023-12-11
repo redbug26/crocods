@@ -995,7 +995,7 @@ int zikLoadBinding(lua_State *L)
             char field[32];
             char value[256];
             sprintf(field, "description_%d", count);
-            sprintf(value, "Duration.: %d:%02d\n", Info.musicTimeInSec / 60, Info.musicTimeInSec % 60);
+            sprintf(value, "Duration.: %d:%02d\n", (int)(Info.musicTimeInSec / 60), (int)(Info.musicTimeInSec % 60));
             setTableFieldString(L, "module", field, value);
             count++;
         }
@@ -2827,6 +2827,9 @@ int dirBinding(lua_State *L)
                             sprintf(filename, "%s", findfile->file->filename);
                         }
 
+                        ddlog(&gb, 2, "Dir: %s %s\n", findfile->file->filename, findfile->file->fullpath);
+
+
                         c = 24 - ((int)strlen(filename) % 24);
                         if (CW.x + strlen(filename) + c >= CW.width) {
                             console_print("\n");
@@ -3012,11 +3015,11 @@ void kFS_addtoFolder(fark_fs_t *fs, fark_file_t *file)
 
     // Extract filename from fullpath
     if (file->filename[0] == 0) {
-        if (file->fullpath[strlen(file->fullpath) - 1] == '/') {
+        if (file->fullpath[strlen(file->fullpath) - 1] == DEFSLASH) {
             file->fullpath[strlen(file->fullpath) - 1] = 0;
         }
 
-        char *lastslash = strrchr(file->fullpath, '/');
+        char *lastslash = strrchr(file->fullpath, DEFSLASH);
         if (lastslash != NULL) {
             strcpy(file->filename, lastslash + 1);
         } else {
@@ -3235,6 +3238,7 @@ void kFS_closeFile(fark_openfile_t *file)
     free(file);
 }
 
+
 void kReadfolder_local(fark_fs_t *fs)
 {
     DIR *d;
@@ -3258,6 +3262,9 @@ void kReadfolder_local(fark_fs_t *fs)
         if (dir == NULL) {
             break;
         }
+
+        printf("CDbinding (1): %s\n", directory);
+        printf("CDbinding (2): %s\n", dir->d_name);
 
         strcpy(filename, directory);
         path2Abs(filename, dir->d_name);
@@ -3476,7 +3483,7 @@ void kReadfolder_dsk(fark_fs_t *fs, const char *mem, int memSize)
 
                 int l = ( Dir->NbPages + 7 ) >> 3;
                 for ( int j = 0; j < l; j++ ) {
-                    int TailleBloc = 1024;
+                    // int TailleBloc = 1024;
                     unsigned char *p = idsk_readBloc((unsigned char *)mem, Dir->Blocks[j]);
                     if ( FirstBlock ) {
                         if ( idsk_checkAmsdos(p) ) {
@@ -3488,8 +3495,8 @@ void kReadfolder_dsk(fark_fs_t *fs, const char *mem, int memSize)
 
                             // haveAmsdos = 1;
 
-                            TailleBloc -= sizeof( idsk_StAmsdos );
-                            memcpy(p, &p[ 0x80 ], TailleBloc);
+                            // TailleBloc -= sizeof( idsk_StAmsdos );
+                            // memcpy(p, &p[ 0x80 ], TailleBloc);
                         } else {
                             file->size = Dir->NbPages * 128;
                         }
